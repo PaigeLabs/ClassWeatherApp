@@ -1,6 +1,6 @@
 (function(){
     'use strict';
-    var weatherController = function(WeatherSvc) {
+    var weatherController = function($routeParams, WeatherSvc) {
         var ctrl = this;
 
         ctrl.message = 'Assurant';
@@ -17,7 +17,8 @@
         };
 
         ctrl.getForecast = function getForecast(){
-            WeatherSvc.GetForecast(ctrl.searchCity)
+            var cityId = $routeParams.cityId;
+            WeatherSvc.GetForecast(cityId)
                 .then(
                 function success(result){
                     var forecastData = result.list.map(function(item){
@@ -38,5 +39,5 @@
     };
 
     angular.module('weatherApp')
-        .controller('WeatherCtrl', ['WeatherSvc', weatherController]);
+        .controller('WeatherCtrl', ['$routeParams', 'WeatherSvc', weatherController]);
 }());

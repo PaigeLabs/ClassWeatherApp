@@ -5,8 +5,8 @@
         var getCurrentWeather = function getCurrentWeather(searchCity) {
                 return $http.get('http://api.openweathermap.org/data/2.5/weather?q=' + searchCity + '&units=imperial');
             },
-            getForecast = function getForecast(searchCity){
-                return $http.get('http://api.openweathermap.org/data/2.5/forecast?q=' + searchCity + '&units=imperial')
+            getForecast = function getForecast(cityId){
+                return $http.get('http://api.openweathermap.org/data/2.5/forecast?id=' + cityId + '&units=imperial')
                     .then(function(result){
                         return result.data;
                     });

@@ -6,12 +6,8 @@
 </head>
 
 <body ng-app="weatherApp" ng-cloak>
-<div>
+<div ng-controller="WeatherCtrl as vm">
     <div ng-view></div>
-    <!--<div ng-repeat="day in forecast">-->
-        <!--<span ng-bind="day.date | date:'short'"></span>-->
-        <!--<span ng-bind="day.temp"></span>-->
-    <!--</div>-->
 </div>
 
 <script src="lib/angular/angular.js"></script>
