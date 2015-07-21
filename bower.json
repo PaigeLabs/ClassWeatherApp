@@ -1,0 +1,13 @@
+{
+  "name": "ClassWeatherApp",
+  "version": "0.0.0",
+  "authors": [
+    "Lee Brandt <leebrandt@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.4.3",
+    "moment": "~2.10.3",
+    "angular-route": "~1.4.3"
+  }
+}
