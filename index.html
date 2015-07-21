@@ -2,22 +2,26 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/main.css" />
 </head>
 
 <body ng-app="weatherApp" ng-cloak>
+
 <div ng-controller="WeatherCtrl as vm">
+    <loader-thing><span>I'm Loading ....</span></loader-thing>
     <div ng-view></div>
 </div>
 
+<!-- bower:js -->
 <script src="lib/angular/angular.js"></script>
-<script src="lib/angular-route/angular-route.min.js">
-
-</script>
+<script src="lib/angular-route/angular-route.js"></script>
 <script src="lib/moment/moment.js"></script>
+<!-- endbower -->
 
 <!-- inject:js -->
 <script src="/modules/Weather/weather.module.js"></script>
+<script src="/modules/Weather/http.interceptor.js"></script>
+<script src="/modules/Weather/loader.directive.js"></script>
 <script src="/modules/Weather/weather.controller.js"></script>
 <script src="/modules/Weather/weather.service.js"></script>
 <!-- endinject -->

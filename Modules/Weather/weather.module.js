@@ -1,7 +1,7 @@
 (function(){
     'use strict';
 
-    var config = function($routeProvider){
+    var config = function($routeProvider, $httpProvider){
         $routeProvider
             .when('/',{
                 templateUrl: 'modules/weather/main.view.html'
@@ -10,9 +10,11 @@
                 templateUrl: 'modules/weather/forecast.view.html'
             })
             .otherwise({redirectTo:'/'});
+
+        $httpProvider.interceptors.push('httpInterceptor');
     };
 
     angular.module('weatherApp', ['ngRoute'])
-        .config(['$routeProvider', config]);
+        .config(['$routeProvider', '$httpProvider', config]);
 }());
 
