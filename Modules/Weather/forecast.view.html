@@ -1,6 +1,6 @@
 <div ng-init="vm.getForecast()">
     <div ng-repeat="day in vm.forecast">
-        <span ng-bind="day.date | date:'short'"></span>
-        <span ng-bind="day.temp"></span>
+        <span ng-bind="day.dt * 1000 | date:'short'"></span>
+        <span ng-bind="day.main.temp"></span>
     </div>
 </div>

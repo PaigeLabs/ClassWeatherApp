@@ -7,7 +7,7 @@
                 templateUrl: 'modules/weather/main.view.html'
             })
             .when('/forecast/:cityId/:date', {
-                templateUrl: '/modules/weather/forecast.view.html'
+                templateUrl: 'modules/weather/forecast.view.html'
             })
             .otherwise({redirectTo:'/'});
     };

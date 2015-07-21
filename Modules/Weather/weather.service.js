@@ -11,6 +11,7 @@
                         return result.data;
                     });
             };
+
         return {
             GetCurrentWeather: getCurrentWeather,
             GetForecast: getForecast
